@@ -1,30 +1,10 @@
-doctype html
-html.no-js
-  head
-    meta(charset='utf-8')
-    title My Webapp
-    meta(name='description' content='')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel='apple-touch-icon' href='apple-touch-icon.png')
-    // Place favicon.ico and apple-touch-icon.png in the root directory
 
-    // build:css styles/vendor.css
-    // bower:css
-    // endbower
-    // endbuild
-
-    // build:css styles/main.css
-    link(rel='stylesheet' href='styles/main.css')
-    // endbuild
-
-    // build:js scripts/vendor/modernizr.js
-    script(src='../bower_components/modernizr/modernizr.js')
-    // endbuild
-
+  include ../includes/head.pug
   body
     | <!--[if lt IE 10]>
     |   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     | <![endif]-->
+
 
     .container
       .header
@@ -41,6 +21,7 @@ html.no-js
         p: a.btn.btn-lg.btn-success(href='#') Splendid!
 
       block content
+        include ../includes/header.pug
 
       .footer
         p ♥ from the Yeoman team
