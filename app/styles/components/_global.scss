@@ -1,0 +1,122 @@
+html {
+
+}
+body {
+  margin:0;
+
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  font-family: 'ProbaPro';
+  color: #010101;
+  font-weight: 200;
+}
+* {
+  box-sizing:border-box;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.u-main-wr-full-screen {
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  @extend .col-only;
+}
+.u-wraper-not-full {
+  width:100%;
+  max-width: 1300px;
+}
+.u-content-wr {
+  flex:1;
+  overflow:hidden;
+}
+.u-float-right {
+  float:right;
+  overflow:hidden;
+  padding:5px 5px 20px 20px;
+}
+
+.u-center {
+  text-align:center;
+}
+.u-cenetered {
+  margin:0 auto;
+}
+.u-res-wr {
+  
+}
+.u-bottom-abs {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+.c-first {
+  background-color:$base-first-color;
+}
+.c-second {
+  background-color:$base-second-color;
+}
+.c-third {
+  background-color:$base-third-color;
+}
+.c-accent {
+  background-color:$accent-color;
+}
+.c-accent-dark {
+  background-color:$accent-dark-color;
+}
+.c-grey-dark {
+  background-color:$grey-dark-color;
+}
+.c-grey-mid {
+  background-color:$grey-mid-color;
+}
+.c-grey-light {
+  background-color:$grey-light-color;
+}
+.c-grey-lightest {
+  background-color:$grey-lightest-color;
+}
+.c-alert {
+  background-color:$alert-color;
+}
+.c-alert-dark {
+  background-color:$alert-dark-color;
+}
+.c-legend-res {
+ background-color: $legend-res-color;
+}
+.c-legend-sale {
+ background-color: $legend-sale-color;
+}
+.g-base-hor {
+  background-image: $base-hor-grad;
+}
+.g-base-vert {
+  background-image: $base-vert-grad;
+}
+.g-light-vert {
+  background-image: $light-vert-grad;
+}
+.g-lightest-vert {
+  background-image: $lightest-vert-grad;
+}
+.g-mid-vert {
+  background-image: $mid-vert-grad;
+}
+.g-dark-top-vert {
+  background-image: $dark-top-vert-grad;
+}
+.g-def-vert {
+  background-image: $def-vert-grad;
+}
+.g-hov-vert {
+  background-image: $hov-vert-grad;
+}

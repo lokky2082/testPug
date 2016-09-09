@@ -1,7 +1,7 @@
 {
 	"sgComment": "SG",
 	"srcFolder": "C:\\pilot-workstat",
-	"outputFile": "C:\\pilot-workstat\\styleguide\\dist\\styleguide.html",
+	"outputFile": "C:\\pilot-workstat\\styleguide.html",
 	"templateFile": "C:\\Users\\admin\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\template\\template.html",
 	"themeFile": "C:\\Users\\admin\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\template\\theme.css",
 	"highlightFolder": "C:\\Users\\admin\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\node_modules\\highlight.js\\styles",

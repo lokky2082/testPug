@@ -1,0 +1,68 @@
+.r-v-center {
+  align-items:center;
+}
+.r-h-center {
+ justify-content: center;
+}
+.r-vh-center{
+    align-items:center;
+    justify-content: center;
+}
+.r-wrap {
+  flex-wrap:wrap;
+}
+
+.stretch {
+  align-content:stretch;
+}
+.r-end {
+  justify-content:flex-end;
+}
+.a-content-start {
+   align-content:flex-start;
+}
+
+.r-sp-b, .c-sp-v-b {
+  justify-content: space-between;
+}
+.r-sp-arr {
+  justify-content: space-around;
+}
+.r-h-center, .col-v-center {
+  justify-content: center;
+}
+
+.row-only {
+  display:flex;
+  flex-direction: row;
+}
+.row-only-inl {
+    display:inline-flex;
+  flex-direction: row;
+}
+.r-wrap {
+flex-wrap: wrap;
+}
+.col-only {
+  display:flex;
+  flex-direction: column;
+}
+
+.c-h-center {
+  align-items:center;
+}
+.c-v-center {
+   justify-content:center;
+}
+.c-vh-center {
+   justify-content:center;
+   align-items:center;
+}
+.c-h-end {
+  justify-content:flex-start;
+  align-items:flex-end;
+}
+.c-hv-end {
+  justify-content:flex-end;
+  align-items:flex-end;
+}

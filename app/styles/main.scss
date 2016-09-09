@@ -1,3 +1,25 @@
 // bower:scss
 @import "bower_components/normalize-scss/_normalize.scss";
 // endbower
+@charset "UTF-8";
+
+// Variables;
+@import "components/variables";
+
+//fonts
+@import "components/proba";
+//Typography
+@import "sassline-base/variables";
+@import "sassline-base/modular-scale";
+@import "sassline-base/mixins";
+@import "sassline-base/typography";
+
+//Animation
+@import "components/animation";
+
+
+// components
+@import "components/flex";
+@import "components/global";
+@import "components/styleguide";
+@import "components/form";

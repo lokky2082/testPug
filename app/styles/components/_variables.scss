@@ -1,0 +1,79 @@
+/* SG
+# Colors/BaseColors
+
+Desc:colors
+
+
+```
+<div class="row-only r-wrap">
+  <div class="s-color-rect c-first">$base-first-color</div>
+  <div class="s-color-rect c-second">$base-second-color</div>
+  <div class="s-color-rect c-third">$base-third-color</div>
+  <div class="s-color-rect c-accent">$accent-color</div>
+  <div class="s-color-rect c-accent-dark">$accent-dark-color</div>
+  <div class="s-color-rect c-grey-dark">$grey-dark-color</div>
+  <div class="s-color-rect c-grey-mid">$grey-mid-color</div>
+  <div class="s-color-rect c-grey-light">$grey-light-color</div>
+  <div class="s-color-rect c-legend-res">$legend-res-color</div>
+  <div class="s-color-rect c-legend-sale">$legend-sale-color</div>
+  <div class="s-color-rect c-alert">$alert-color</div>
+  <div class="s-color-rect c-alert-dark">$alert-dark-color</div>
+</div>
+```
+*/
+
+//Colors
+$base-first-color:#000;
+$base-second-color:#fff;
+$base-third-color:#f8cd5f;
+$accent-color:#daa944;
+$accent-dark-color:#cf8447;
+$grey-dark-color:#333;
+$grey-mid-color: #717171;
+$grey-light-color: #7a7a7a;
+$grey-lightest-color: #4f4f4f;
+$legend-res-color: #e1b592;
+$legend-sale-color:#f7e4c4;
+$alert-color:#eb2f2f;
+$alert-dark-color:#c50000;
+
+/* SG
+# Colors/Gradients
+
+Desc:gradients
+
+
+```
+<div class="row-only r-wrap">
+  <div class="s-color-rect g-base-hor">$base-hor-grad</div>
+  <div class="s-color-rect g-base-vert">$base-vert-grad</div>
+  <div class="s-color-rect g-light-vert">$light-vert-grad</div>
+  <div class="s-color-rect g-lightest-vert">$lightest-vert-grad</div>
+  <div class="s-color-rect g-mid-vert">$mid-vert-grad</div>
+  <div class="s-color-rect g-dark-top-vert">$dark-top-vert-grad</div>
+  <div class="s-color-rect g-def-vert">$def-vert-grad</div>
+  <div class="s-color-rect g-hov-vert">$hov-vert-grad</div>
+</div>
+```
+*/
+
+
+//Gradients
+$base-hor-grad:linear-gradient(to right, $base-third-color 0%, $accent-color 29%, #c08726 42%, #f6cb5f 55%, #bb8027 100%);
+$base-vert-grad:linear-gradient(to top, $base-third-color 0%, $accent-color 29%, #c08726 42%, #f6cb5f 55%, #bb8027 100%);
+$base-vert-grad-ex:$base-third-color 0%, $accent-color 29%, #c08726 42%, #f6cb5f 55%, #bb8027 100%;
+$base-hor-grad-ex:$base-third-color 0%, $accent-color 29%, #c08726 42%, #f6cb5f 55%, #bb8027 100%;
+$light-vert-grad:linear-gradient(to top, #efd798 0%, #dead47 19%, #f9d57c 45%, $base-second-color 100%);
+$lightest-vert-grad:linear-gradient(to top, $base-second-color 0%, #f0e8e2 13%, #f4f1ee 40%, $base-second-color 68%, $base-second-color 100%);
+$mid-vert-grad:linear-gradient(180deg, #fdf9ee 0%, $base-second-color 49%, #d9d9d9 100%);
+$dark-top-vert-grad:linear-gradient(180deg, #efd798 0%, $base-second-color 100%);
+$def-vert-grad:linear-gradient(to top, #efd798 0%, #fffbf0 60%, $base-second-color 100%);
+$hov-vert-grad:linear-gradient(to top, #efd798 0%, #fffbf0 33%, $base-second-color 100%);
+//Text-colors
+
+
+//Shadows
+$hover-shad:inset 0 0 21px rgba(255, 255, 190, 0.85);
+
+/*** Fonts ***/
+$probaPro-font-path: "../fonts/ProbaPro/" !default;

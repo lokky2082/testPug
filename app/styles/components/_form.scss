@@ -1,0 +1,293 @@
+/* Remove Focus Boxes */
+select:focus {
+  background-color: $base-second-color;
+  border: 1px solid #a5b8e8;
+  box-shadow: 0.5px 0.9px 3.9px 1.1px rgba(165, 184, 232, 0.76);
+}
+
+
+label {
+  font-size: 16px;
+  color:  $grey-mid-color;
+}
+
+/***************************
+   Text Inputs + Textarea
+****************************/
+
+// Style Placeholders
+::-webkit-input-placeholder {
+   color:$grey-dark-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $grey-dark-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $grey-dark-color;
+}
+
+:-ms-input-placeholder {
+   color: $grey-dark-color;
+}
+
+// Text inputs
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+  // General Styles
+  background-color: transparent;
+  border: 1px solid $grey-dark-color;
+  border-radius: 0;
+  outline: none;
+  height:2.4rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 8px 0 8px 0;
+  padding: 0  0  0 10px;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all .3s;
+
+
+  // Disabled input style
+  &:disabled, &[readonly="readonly"] {
+    color: $grey-mid-color;
+    border-bottom: 1px dotted $grey-mid-color;
+  }
+  // Disabled label style
+  &:disabled+label, &[readonly="readonly"]+label {
+    color: $grey-mid-color;
+  }
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $grey-mid-color;
+    box-shadow: 0 1px 0 0 $grey-mid-color;
+  }
+  // Focused label style
+  &:focus:not([readonly])+label {
+    color: $grey-mid-color;
+  }
+  // Valid Input Style
+  &.valid,
+
+  &:focus.valid {
+    border-bottom: 1px solid $base-first-color;
+    box-shadow: 0 1px 0 0 $base-first-color;
+  }
+  // Custom Success Message
+  &.valid + label:after,
+  &:focus.valid + label:after {
+    content: attr(data-success);
+    color: $base-first-color;
+    opacity: 1;
+  }
+  // Invalid Input Style
+  &.invalid,
+  &:focus.invalid {
+    border-bottom: 1px solid $alert-color;
+    box-shadow: 0 1px 0 0 $alert-color;
+  }
+  // Custom Error message
+  &.invalid + label:after,
+  &:focus.invalid + label:after {
+    content: attr(data-error);
+    color: $alert-color;
+    opacity: 1;
+  }
+
+  // Form Message Shared Styles
+  & + label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 65px;
+    opacity: 0;
+    transition: .2s opacity ease-out, .2s color ease-out;
+  }
+}
+
+// Styling for input field wrapper
+.input-field {
+  position: relative;
+  margin-top: 0.5rem;
+  input{width:100%;}
+  label {
+    color: $grey-dark-color;
+    position: absolute;
+    top: 1.2rem;
+    left: 10px;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-out;
+  }
+  label.active {
+    font-size: 14px;
+    transform: translateY(-180%);
+  }
+
+}
+
+
+
+/*********************
+      File Input
+**********************/
+.file-field {
+  position: relative;
+
+  .file-path-wrapper {
+    overflow: hidden;
+    padding-left: 10px;
+  }
+
+  input.file-path { width: 100%; }
+
+  .btn {
+    float: left;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  span {
+    cursor: pointer;
+  }
+
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+
+select {
+   background-color: rgba(255, 255, 255, 0.90);
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #f2f2f2;
+   border-radius: 2px;
+   height: 3rem;
+}
+.b-form-modal {
+  opacity:0;
+  z-index:-1;
+  position: fixed;
+  top:20vh;
+  left:50%;
+  padding:29px 45px;
+  margin-left:-160px;
+  width: 370px;
+  background-color: $base-second-color;
+  border: 1px solid $base-first-color;
+  box-shadow: 0 0 13px 5px rgba($base-first-color, 0.38);
+    @extend .col-only;
+    @extend .c-h-center;
+  .input-field {
+    width:100%;
+    input {
+      box-sizing:border-box;
+      background:#fff;
+    }
+    .input-field_item {
+      width:30%;
+      position: relative;
+      input {
+        width:100%;
+      }
+    }
+    textarea {
+      box-sizing:border-box;
+      background:#fff;
+      outline:none;
+      width:100%;
+      height:80px;
+      padding:10px;
+    }
+  }
+  form {
+     @extend .col-only;
+     @extend .c-h-center;
+     width:100%;
+  }
+  p {
+    text-align:center;
+    width:100%;
+    padding:0;
+    margin:15px 0 5px 0;
+    line-height: 1.3;
+    font-size:20px;
+  }
+  .b-def-btn {
+    margin-top:15px;
+  }
+  h3{
+    color:$grey-dark-color;
+    margin: 0 0 10px  0;
+  }
+  &.__big {
+    animation: big 1s  ease normal;
+    animation-fill-mode: forwards;
+  }
+  &.__small {
+    animation: small 1s  ease normal;
+    animation-fill-mode: forwards;
+  }
+  .b-button {
+    margin-top:20px;
+  }
+}
+
+.el-modal-close {
+  position:absolute;
+  font-size:2rem;
+  color: #000;
+  font-size: 2rem;
+    color: #000;
+    right: 10px;
+    top: 9px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  background:url(../images/cross.png)no-repeat;
+  background-size:cover;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.j-sended {
+  height:150px;
+}
+
+@keyframes big {
+   0% { transform: scale(0); }
+   70% { transform: scale(1);}
+   90% { transform: scale(0.95);}
+   100% { transform: scale(1);}
+}
+@keyframes small {
+   0% { transform: scale(1); }
+   15% { transform: scale(0.95);}
+   40% { transform: scale(1);}
+   100% { transform: scale(0);}
+}

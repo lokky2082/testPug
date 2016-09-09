@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "ProbaPro";
+    src: local(ProbaPro Light), url('#{$probaPro-font-path}ProbaProLight.eot') format("opentype");
+    src: url("#{$probaPro-font-path}ProbaProLight.eot?#iefix") format('embedded-opentype'),
+        url("#{$probaPro-font-path}ProbaProLight.woff2") format("woff2"),
+        url("#{$probaPro-font-path}ProbaProLight.woff") format("woff"),
+        url("#{$probaPro-font-path}ProbaProLight.ttf") format("truetype");
+    font-weight: 200;
+
+}
+@font-face {
+    font-family: "ProbaPro";
+    src: local(ProbaPro Regular), url('#{$probaPro-font-path}ProbaProRegular.eot') format("opentype");
+    src: url("#{$probaPro-font-path}ProbaProRegular.eot?#iefix") format('embedded-opentype'),
+        url("#{$probaPro-font-path}ProbaProRegular.woff2") format("woff2"),
+        url("#{$probaPro-font-path}ProbaProRegular.woff") format("woff"),
+        url("#{$probaPro-font-path}ProbaProRegular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "ProbaPro";
+    src: local(ProbaPro Medium), url('#{$probaPro-font-path}ProbaProMedium.eot') format("opentype");
+    src: url("#{$probaPro-font-path}ProbaProMedium.eot?#iefix") format('embedded-opentype'),
+        url("#{$probaPro-font-path}ProbaProMedium.woff2") format("woff2"),
+        url("#{$probaPro-font-path}ProbaProMedium.woff") format("woff"),
+        url("#{$probaPro-font-path}ProbaProMedium.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "ProbaPro";
+    src: local(ProbaPro Bold), url('#{$probaPro-font-path}ProbaProBold.eot') format("opentype");
+    src: url("#{$probaPro-font-path}ProbaProBold.eot?#iefix") format('embedded-opentype'),
+        url("#{$probaPro-font-path}ProbaProBold.woff2") format("woff2"),
+        url("#{$probaPro-font-path}ProbaProBold.woff") format("woff"),
+        url("#{$probaPro-font-path}ProbaProBold.ttf") format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "ProbaPro";
+    src: local(ProbaPro semiBold), url('#{$probaPro-font-path}ProbaProSemiBold.eot') format("opentype");
+    src: url("#{$probaPro-font-path}ProbaProSemiBold.eot?#iefix") format('embedded-opentype'),
+        url("#{$probaPro-font-path}ProbaProSemiBold.woff2") format("woff2"),
+        url("#{$probaPro-font-path}ProbaProSemiBold.woff") format("woff"),
+        url("#{$probaPro-font-path}ProbaProSemiBold.ttf") format("truetype");
+    font-weight: 700;
+}
