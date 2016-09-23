@@ -1,0 +1,9 @@
+table.data-table
+  thead
+    tr: each val, index in header
+        th!= val
+  tbody
+  -for(var i= 1; i<7;i++)
+     tr
+       each item, index in items
+            td(class=(item.classtext))!= item.text

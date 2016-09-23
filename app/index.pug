@@ -1,22 +1,49 @@
 
 extends layouts/default
 block title
- h1 Page Of Cool Stuff
+ h1 Страница Менеджера
 block content
+  -var btntext = "Добавить заявку"
+  -var cardtext = "Вы можете добавить любое количество заявок."
+  div(class="row-only r-sp-b")
+    div(class="col-item_half __pad")
+     include includes/search.pug
+     div(class="row-only r-sp-b u-marg-bot")
+       div(class="col-item_half")
+         h4 Заявки
+         include includes/calend-two.pug
+       div(class="col-item_half __pad")
+         label(for="manager")
+          h4 Менеджер
+         div.chosen-select-holder
+           select(class="chosen-select", name="manager", multiple, data-placeholder="Выберите менеджера")
+            -for(var i = 1;i<5;i++){
+            option(value="#{i}") Имя менеджера  #{i}
+            -}
+     div(class="row-only r-sp-b u-marg-bot")
+        div(class="col-item_half")
+          label(for="manager")
+           h4 По статусу
+          div.chosen-select-holder
+            select(class="chosen-select", name="manager", multiple, data-placeholder="Статус")
+             -for(var i = 1;i<5;i++){
+             option(value="#{i}") Статус  #{i}
+             -}
+        div(class="col-item_half __pad")
+          label(for="manager")
+           h4 По местоположению
+          div.chosen-select-holder
+            select(class="chosen-select", name="manager", multiple, data-placeholder="Местоположению")
+             -for(var i = 1;i<5;i++){
+             option(value="#{i}") Местоположение  #{i}
+             -}
 
-  #test
-   block test-content
-
-  .row.marketing
-    .col-lg-6
-      h4 HTML5 Boilerplate
-      p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-
-      h4 Sass
-      p Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-
-      h4 Bootstrap
-      p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
-
-      h4 Modernizr
-      p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
+    div(class="col-item_half __pad")
+     -var iconame='def'
+     include includes/add-card.pug
+  section
+    h2 Список заявок
+    div.table-holder
+      -var  header = ['Заявка', 'Клиент', 'Менеджер', 'Дата отгрузки клиенту', 'Дата/время готовности на производстве', 'Важность', 'Окажется на складе', 'Статус', 'Местоположение заказа']
+      -var items = [{"classtext":"link", "text":"<a class='def-link' href='#'>124</a>"},{"classtext":"", "text":"Молькин Александр Викторович"},{"classtext":"", "text":"Белобородько В.В."},{"classtext":" ", "text":"26.08.2016"},{"classtext":" ", "text":"26.08.2016 17-30"},{"classtext":"col-priority", "text":"Высокая"},{"classtext":" ", "text":"26.08.2016"},{"classtext":"col-status", "text":"Готов"},{"classtext":" ", "text":"Склад"},{"classtext":"col-delete", "text":"<a class='del-btn j-del'><svg viewBox='0 0 16 16' class='icon-del'><use xlink:href='images/svg/plus.svg#def'></use></svg></a>"}];
+      include includes/table.pug

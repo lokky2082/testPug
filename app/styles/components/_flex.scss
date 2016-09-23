@@ -35,6 +35,9 @@
 .row-only {
   display:flex;
   flex-direction: row;
+  &.__inline {
+    display:inline-flex;
+  }
 }
 .row-only-inl {
     display:inline-flex;
@@ -65,4 +68,10 @@ flex-wrap: wrap;
 .c-hv-end {
   justify-content:flex-end;
   align-items:flex-end;
+}
+.col-item_half {
+  width:50%;
+ &.__pad {
+   padding: 0 1rem;
+ }
 }

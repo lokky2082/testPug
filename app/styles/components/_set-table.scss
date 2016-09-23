@@ -1,0 +1,17 @@
+.set-table {
+ margin: 2rem 0;
+}
+.set-table_item {
+  margin-right: 3rem;
+}
+.set-table_item-title {
+  @include sassline($fontsize: delta, $font: $headingtype, $lineheight: 1.6, $below: 1.5, $breakpoint: all);
+}
+.set-table_item-option {
+  @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 1.1, $below: 0.5, $breakpoint: all);
+  line-height: 1;
+  input {
+    width:3rem;
+    margin-left: 1rem;
+  }
+}

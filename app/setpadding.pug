@@ -1,0 +1,8 @@
+extends layouts/default
+block title
+ h1 Настройка отступов изделий
+
+block content
+ -var products = [{"name":"Нащельник", "list":[25,30,1.5]},{"name":"Отлив", "list":[25,30,1.5]},{"name":"Козырек", "list":[25,30,1.5]}];
+ include includes/setpad.pug
+ button.def-btn Сохранить

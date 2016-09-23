@@ -1,0 +1,9 @@
+div.messages-list
+  h2 Оповещения:
+  each item, index in messages
+   div.messages-list_item
+     time!= item.date
+     div.messages-list_item_inner
+      - for (var i=0; i<item.list.length; i++)
+       p!=item.list[i][0]
+        span(class=(item.list[i][2]))!=item.list[i][1]

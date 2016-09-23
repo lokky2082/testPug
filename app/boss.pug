@@ -1,0 +1,16 @@
+
+extends layouts/default
+
+block title
+   h1 Список заявок
+block content
+    div(class="row-only")
+     div(class="col-item")
+       div.table-holder
+         -var  header = ['Заявка', 'Клиент', 'Менеджер', 'Сроки', 'Местоположение', '<button class="deco-btn __dark">Выбрать все</button>']
+         -var items = [{"classtext":"link", "text":"<a class='def-link' href='#'>124</a>"},{"classtext":"", "text":"Александров Александр Александрович"},{"classtext":"", "text":"Иванов И.И."},{"classtext":"", "text":"Просрочен"},{"classtext":"", "text":"Производство"},{"classtext":"u-center", "text":"<input type='checkbox' id='custom' checked='checked' class='form__checkbox'/><label for='custom' class='form__title'></label>"}];
+         include includes/table.pug
+     div(class="col-item col-only")
+       button.deco-btn.__dark На склад
+       button.deco-btn.__disabled Отгружен клиенту
+    button.def-btn Сохранить

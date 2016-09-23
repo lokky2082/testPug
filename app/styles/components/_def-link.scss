@@ -1,0 +1,28 @@
+/* SG
+# links/default
+
+Desc:def link
+
+```
+<div class="row-only r-wrap">
+  <div class="def-lin">link</div>
+  <div class="def-lin __dashed">link</div>
+</div>
+```
+*/
+.def-link {
+  color: #396c98;
+  font-size: inherit;
+  text-decoration: underline;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &:hover {
+    color:$accent-color;
+    transition: none;
+  }
+  &.__dashed {
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    border-color:currentColor;
+  }
+}

@@ -1,0 +1,46 @@
+extends layouts/default
+block title
+ h1 Заявка 124 от 25.08.2016 12:46
+block content
+ div(class="row-only r-sp-b")
+  div(class="col-item")
+     h2 Общие данные
+     div.data-list
+       div.data-list_item
+          p Дата отгрузки со склада
+          include includes/calend-one.pug
+       div.data-list_item
+         p Клиент
+         div.fild-holder
+          input(type="text", name="customerName" placeholder="Иванов Иван Иванович")
+  div(class="col-item")
+    div.add-card.__big
+      div(class="row-only r-sp-b")
+        div(class="col-item")
+          p Готовность:
+          h4 31.08.2016   14:00
+          p Менеджер:
+          h4 Иванов И.И.
+          p Важность:
+          h4.hight-prior Высокая
+        div(class="col-item")
+          p Статус заявки:
+          h4.in-work В работе
+          p Местоположение заявки:
+          h4 На складе
+          p г.Екатеринбург, ул.Чистопольская, 6
+ section
+   div.row-only
+    div(class="col-item")
+      h2 Состав заявки
+      div.table-holder
+        -var  header = ['Наименование', 'Ширина, мм', 'Длина, мм', 'Кол-во, шт.', 'Цвет', 'Комментарии к заказу']
+        -var items = [{"classtext":"", "text":"Отлив"},{"classtext":"", "text":"<input type='text' name='width[]' value='200'>"},{"classtext":"", "text":"<input type='text' name='height[]' value='200'>"},{"classtext":"_min", "text":"<input type='text' name='count[]' value='2'>"},{"classtext":" ", "text":"<select name='color[]'><option value='Белый'>Белый</option><option value='Коричневый'>Коричневый</option><option value='Коричневый2'>Коричневый2</option></select>"},{"classtext":"", "text":"<input type='file' name='user-file[]'"},{"classtext":"col-delete", "text":"<a class='del-btn j-del'><svg viewBox='0 0 16 16' class='icon-del'><use xlink:href='images/svg/plus.svg#def'></use></svg></a>"}];
+        include includes/table.pug
+        div.row-adder
+          -var rowitems = [{"classtext":"", "text":"<select name='product[]'><option value='отлив'>Отлив</option><option value='Подоконник'>Подоконник</option><option value='Карниз'>Карниз</option></select>"},{"classtext":"", "text":"<input type='text' name='width[]' value='200'>"},{"classtext":"", "text":"<input type='text' name='height[]' value='200'>"},{"classtext":"_min", "text":"<input type='text' name='count[]' value='2'>"},{"classtext":" ", "text":"<select name='color[]'><option value='Белый'>Белый</option><option value='Коричневый'>Коричневый</option><option value='Коричневый2'>Коричневый2</option></select>"},{"classtext":"", "text":"<input type='text' name='user-file-text[]' placeholder='Комментарий к заказу'>"},{"classtext":"col-add", "text":"<a class='def-link __dashed j-add'>Добавить</a>"}];
+          include includes/addrow.pug
+    div(class="col-item")
+      -var messages = [{"date":"01.09.2016 12:46", "list":[['Дата/время готовности изменена на', '28.02.2016 17-30',''], ['Статус изменена на', 'В работе','in-work']]},{"date":"01.09.2016 12:46", "list":[['Дата/время готовности изменена на', '28.02.2016 17-30',''], ['Статус изменена на', 'В работе','in-work']]}];
+      include includes/messages.pug
+ button.def-btn Сохранить

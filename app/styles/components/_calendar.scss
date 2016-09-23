@@ -1,0 +1,196 @@
+/* SG
+# Widgets/date-picker
+
+Desc:date-picker used kalendae.js
+
+```
+<div class="b-date-change j-calend-contein col-item_half"><img class="el-date-change_img j-open-kalendae" src="images/date.jpg">
+  <input class="j-date-fild j-open-kalendae" type="text" name="order-date" readonly>
+  <div class="b-date-picker-holder j-date-picker-holder auto-kal" data-kal="months: 1">
+    <div class="b-close j-kalendae-close">X</div>
+  </div>
+</div>
+```
+*/
+.b-date-change {
+    position:relative;
+    cursor:pointer;
+
+    input {
+
+        padding-left: 10px;
+    }
+}
+.calendare-two {
+  .b-date-change {
+    width:45%;
+  }
+}
+.b-date-picker-holder {
+    position:absolute;
+    top:30px;
+    left:0;
+    display: none;
+    .kalendae {
+
+        padding: 10px;
+        background: #fff;
+        border:2px solid #0079d4;
+        @extend .row-only;
+
+           z-index: 100;
+           .k-calendar {
+              background: #fff;
+              margin-right: 20px;
+              border: 1px solid #d0d4d9;
+              &:last-child{
+                  margin-right:0;
+              }
+           }
+           .k-separator {
+               display:none;
+           }
+    }
+}
+.kalendae .k-days span.k-in-month.k-active {
+    color:#999;
+}
+.kalendae .k-days span.k-in-month.k-active.j-delivery {
+    color:#000;
+}
+.kalendae .k-days span.k-in-month.k-active.j-free{
+    color:#000;
+}
+.kalendae .k-days span.k-selected.k-active.j-delivery {
+    color:#fff;
+}
+.kalendae .k-days span.k-selected.k-active.j-free {
+    color:#fff;
+}
+.kalendae .k-days span.k-today {
+    background: #e8f8ff;
+}
+.kalendae {
+
+           background: #fff;
+           padding: 0;
+           margin: 5px;
+           border-radius: 0;
+           font-size: 14px;
+           font-family: inherit;
+          .k-title {
+           height: 37px;
+           background-color: #e8f8ff;
+           font-size: 16px;
+           @extend .row-only;
+           @extend .r-vh-center;
+            width:100%;
+            text-transform: uppercase;
+          }
+
+          .k-header  {
+              width:282px;
+              span {
+                  width:40px;
+                  height:40px;
+                  border-top:1px solid #d0d4d9;
+                  border-bottom:1px solid #d0d4d9;
+                  border-left:1px solid #d0d4d9;
+                  margin:0;
+                  font-weight:normal;
+                  @extend .row-only;
+                  @extend .r-vh-center;
+
+              }
+          }
+          .k-calendar {
+            width:auto;
+            .k-btn-next-month {
+
+            }
+            .k-btn-next-year {
+               display: none;
+            }
+            .k-btn-previous-year {
+               display: none;
+            }
+
+          }
+          .k-days {
+              width: 282px;
+              border-right:1px solid #d0d4d9;
+              span {
+                   @extend .row-only;
+                   @extend .r-vh-center;
+                  width:40px;
+                  height:40px;
+                  border-top:1px solid #d0d4d9;
+                  border-left:1px solid #d0d4d9;
+                  margin: 0;
+                  border-radius:0;
+                  position:relative;
+                  color:#999;
+                  &:nth-child(7n){
+                     border-right:none;
+                  }
+              }
+
+          }
+
+}
+
+.k-days span.k-in-month.j-free{
+   border:1px solid #e63b19 !important;
+   &:after {
+       content: '';
+       width:11px;
+       height:11px;
+       position:absolute;
+       top:0;
+       right:-1px;
+       background: url('../images/corner.png')no-repeat;
+       background-size:contain;
+   }
+}
+.k-days span.j-delivery {
+   color:#000;
+   cursor:pointer;
+}
+.kalendae .k-btn-previous-month, .kalendae .k-btn-next-month {
+       top: auto;
+}
+.kalendae .k-days span.k-out-of-month {
+  color:transparent;
+
+}
+.kalendae .k-days span.k-out-of-month.j-free {
+   &:after {
+       display:none;
+   }
+   border: 1px solid #eee;
+
+}
+.el-date-change_img {
+    width: 34px;
+    height: 29px;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.b-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    font-size: 16px;
+    z-index: 110;
+    width: 20px;
+    height: 20px;
+    background: #0079d4;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    color: #fff;
+}

@@ -18,25 +18,26 @@ Desc:colors
   <div class="s-color-rect c-legend-sale">$legend-sale-color</div>
   <div class="s-color-rect c-alert">$alert-color</div>
   <div class="s-color-rect c-alert-dark">$alert-dark-color</div>
+  <div class="s-color-rect c-ok">$ok-color</div>
 </div>
 ```
 */
 
 //Colors
-$base-first-color:#000;
-$base-second-color:#fff;
+$base-first-color:#1e245c;
+$base-second-color:#007ff7;
 $base-third-color:#f8cd5f;
-$accent-color:#daa944;
+$accent-color:#fb0302;
 $accent-dark-color:#cf8447;
 $grey-dark-color:#333;
-$grey-mid-color: #717171;
+$grey-mid-color: #aaa;
 $grey-light-color: #7a7a7a;
 $grey-lightest-color: #4f4f4f;
 $legend-res-color: #e1b592;
 $legend-sale-color:#f7e4c4;
 $alert-color:#eb2f2f;
 $alert-dark-color:#c50000;
-
+$ok-color:lime;
 /* SG
 # Colors/Gradients
 

@@ -1,0 +1,13 @@
+div.row-only.set-table
+ each item, index in products
+  div.set-table_item
+   div.set-table_item-title!= item.name
+   div.set-table_item-option.row-only.r-v-center
+     span Отступы: левый и правый, в мм
+     input(type="text", value=(item.list[0]), tabindex="1")
+   div.set-table_item-option.row-only.r-v-center
+     span Отступы: левый и правый, в мм
+     input(type="text", value=(item.list[1]), tabindex="1")
+   div.set-table_item-option.row-only.r-v-center
+     span Отступы: левый и правый, в мм
+     input(type="text", value=(item.list[2]), tabindex="1")

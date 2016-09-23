@@ -1,0 +1,41 @@
+/* SG
+# Buttons/Default
+
+Desc:buttons
+
+```
+<div class="row-only r-wrap">
+  <div class="def-btn">default button</div>
+  <div class="def-btn __plus">add button</div>
+</div>
+```
+*/
+.def-btn {
+  font-size: 16px;
+  padding: 5px 20px;
+  line-height: 1;
+  height:30px;
+  @extend button;
+  @extend .row-only;
+  @extend .r-v-center;
+  .btn-ico {
+    width:19px;
+    height:19px;
+    margin-right: 5px;
+    transition: all 0.2s ease-in;
+    svg {
+      width:100%;
+      height:100%;
+    }
+  }
+  &.__small{
+    font-size: inherit;
+    padding: 5px 15px;
+  }
+  &:hover {
+    .btn-ico{
+      transition: none;
+      color:$ok-color;
+    }
+  }
+}

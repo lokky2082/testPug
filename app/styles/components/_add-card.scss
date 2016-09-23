@@ -1,0 +1,43 @@
+/* SG
+# Widgets/card
+
+Desc:card
+
+```
+<div class="add-card">
+  <button class="def-btn row-only r-v-center __plus"><span>Добавить заявку</span></button><p>Вы можете добавить любое количество заявок.</p>
+</div>
+```
+*/
+.add-card {
+  background-color: #f4fcff;
+  border: 1px solid #abd5e3;
+  border-radius: 2px;
+  padding: 3% 3%;
+  max-width:500px;
+  min-width:300px;
+  p {
+    margin-top: 2rem;
+  }
+  &.__big{
+    max-width: none;
+    @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 1.1, $below: 0.5, $breakpoint: all);
+    p {
+      margin-top: 1rem;
+    }
+    .col-item {
+      width:300px;
+      padding: 0 3px 0 0;
+    }
+  }
+  &.__middle {
+    max-width: none;
+    .col-item {
+      margin-right: 2rem;
+      white-space: nowrap;
+    }
+    p {
+      margin-top: 0.3rem;
+    }
+  }
+}

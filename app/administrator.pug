@@ -1,0 +1,98 @@
+
+extends layouts/default
+
+block title
+   h1 Страница Администратора
+block content
+    div(class="row-only r-sp-b")
+     div(class="col-item")
+       h2 Время работы
+       h4 Рабочие дни
+       div.chosen-select-holder
+         select(class="chosen-select", name="work-time", multiple, data-placeholder="Выберите день")
+          -for(var i = 1;i<8;i++){
+          option(value="#{i}") День  #{i}
+          -}
+       h4 Рабочее время
+       div.options-list-holder
+         div.options-list.row-only
+           div.option-list_item
+             div.option-list_item-title Начало (ЧЧ:ММ)
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             -}
+           div.option-list_item
+             div.option-list_item-title Конец (ЧЧ:ММ)
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             -}
+           div.option-list_item
+             div.option-list_item-title &nbsp;
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               a.del-btn.j-del
+                svg(viewBox='0 0 16 16', class='icon-del')
+                 use(xlink:href='images/svg/plus.svg#def')
+             -}
+         a.def-link.__dashed.j-add Добавить
+       div.row-only.r-sp-b.u-mg-top.u-child-mg
+         p Суммарное рабочее время:
+          span.alert-color 7 ч 15 мин
+         p Время перерывов:
+          b 45 мин
+         p Норма: 8 ч
+       h4.u-mg-top Нерабочее время
+       div.options-list-holder
+         div.options-list.row-only
+           div.option-list_item
+             div.option-list_item-title Дата (ДД.ММ.ГГГГ)
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               include includes/calend-one.pug
+             -}
+           div.option-list_item
+             div.option-list_item-title Начало (ЧЧ:ММ)
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             -}
+           div.option-list_item
+             div.option-list_item-title Конец (ЧЧ:ММ)
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             -}
+           div.option-list_item
+             div.option-list_item-title &nbsp;
+             -for(var i = 1;i < 4;i++){
+             div.option-list_item-cel
+               a.del-btn.j-del
+                svg(viewBox='0 0 16 16', class='icon-del')
+                 use(xlink:href='images/svg/plus.svg#def')
+             -}
+         a.def-link.__dashed.j-add Добавить
+     div(class="col-item")
+       h2 Среднее время работы
+       div.add-card.__middle
+         form.row-only.__inline.u-marg-bot
+           div.col-item
+             p Норма:
+             input(type='text', name="normal", value="3", class="__min")
+             span мин.
+           div.col-item
+             p За сегодня:
+             p
+              b 2,25 мин.
+           div.col-item
+             p За месяц:
+             p
+              b 2,25 мин.
+           div.col-item
+             p За год:
+             p
+              b 2,25 мин.
+         button.def-btn Сохранить
+
+    button.def-btn Сохранить

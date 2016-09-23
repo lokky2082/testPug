@@ -1,0 +1,23 @@
+.options-list {
+
+}
+.option-list_item {
+  margin-right: 1.5rem;
+}
+.option-list_item-cel {
+  @extend .col-only;
+  @extend .c-v-center;
+  margin-bottom: 1rem;
+  height:40px;
+  input{
+    &.__min{
+      width:100px;
+    }
+  }
+}
+.option-list_item-title {
+   @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 1.1, $below: 0.5, $breakpoint: all);
+}
+.options-list-holder {
+  margin-bottom: 2rem;
+}

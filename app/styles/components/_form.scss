@@ -17,19 +17,19 @@ label {
 
 // Style Placeholders
 ::-webkit-input-placeholder {
-   color:$grey-dark-color;
+   color:#7a7a7a;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: $grey-dark-color;
+  color:#7a7a7a;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: $grey-dark-color;
+  color:#7a7a7a;
 }
 
 :-ms-input-placeholder {
-   color: $grey-dark-color;
+   color:#7a7a7a;
 }
 
 // Text inputs
@@ -48,22 +48,22 @@ textarea.materialize-textarea {
 
   // General Styles
   background-color: transparent;
-  border: 1px solid $grey-dark-color;
+  border: 1px solid $grey-mid-color;
   border-radius: 0;
   outline: none;
-  height:2.4rem;
+  height:30px;
   width: 100%;
   font-size: 1rem;
-  margin: 8px 0 8px 0;
+
   padding: 0  0  0 10px;
   box-shadow: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
   transition: all .3s;
 
 
   // Disabled input style
   &:disabled, &[readonly="readonly"] {
-    color: $grey-mid-color;
+    color: $grey-light-color;
     border-bottom: 1px dotted $grey-mid-color;
   }
   // Disabled label style
@@ -72,12 +72,12 @@ textarea.materialize-textarea {
   }
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid $grey-mid-color;
-    box-shadow: 0 1px 0 0 $grey-mid-color;
+    border-bottom: 1px solid $base-first-color;
+    box-shadow: 0 1px 0 0 $base-first-color;
   }
   // Focused label style
   &:focus:not([readonly])+label {
-    color: $grey-mid-color;
+    color: $base-first-color;
   }
   // Valid Input Style
   &.valid,
@@ -116,6 +116,9 @@ textarea.materialize-textarea {
     opacity: 0;
     transition: .2s opacity ease-out, .2s color ease-out;
   }
+  &.__min {
+    width:50px;
+  }
 }
 
 // Styling for input field wrapper
@@ -138,9 +141,64 @@ textarea.materialize-textarea {
   }
 
 }
+.fild[name="order-search"]{
+  width:80%;
+  width:400px;
+}
+.fild {
+  position: relative;
+  margin-right:1.5rem;
+}
+.inp-row-holder {
 
+}
+.fild-group {
+  margin-bottom: 2rem;
+}
+/*********************
+    Checkbox
+**********************/
+.form__checkbox {
+  position: absolute;
+  left: -9999px;
+  ~ .form__title:after{
+    opacity: 0;
+    transform: scale(0);
+  }
+  &:checked ~ .form__title:after{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-
+.form__title{
+  position: relative;
+  padding-left: 25px;
+  line-height: 24px;
+  cursor: pointer;
+  &:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $base-second-color;
+    background: #FFF;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.3);
+  }
+  &:after{
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: $base-second-color;
+    transition: all .3s ease-out;
+  }
+}
 /*********************
       File Input
 **********************/
@@ -185,9 +243,10 @@ select {
    background-color: rgba(255, 255, 255, 0.90);
    width: 100%;
    padding: 5px;
-   border: 1px solid #f2f2f2;
+   border: 1px solid $grey-light-color;
    border-radius: 2px;
-   height: 3rem;
+   height: 30px;
+   font-size: 12px;
 }
 .b-form-modal {
   opacity:0;
@@ -269,7 +328,7 @@ select {
     cursor: pointer;
     width: 25px;
     height: 25px;
-  background:url(../images/cross.png)no-repeat;
+  background:url("../images/cross.png")no-repeat;
   background-size:cover;
   &:hover {
     opacity: 0.8;
@@ -278,7 +337,9 @@ select {
 .j-sended {
   height:150px;
 }
-
+.chosen-select-holder {
+  margin-bottom: 2rem;
+}
 @keyframes big {
    0% { transform: scale(0); }
    70% { transform: scale(1);}
