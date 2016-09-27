@@ -20,64 +20,132 @@ $(document).on('click', '.k-active', function(){
   calend.css({'display':'none'});
 });
 var todayStart = new Date;
-todayStart.setHours(18,0,0);
+todayStart.setHours(9,0);
 todayStart = Date.parse(todayStart);
 var todayEnd = new Date;
-todayEnd.setHours(18);
+todayEnd.setHours(18,0);
 todayEnd = Date.parse(todayEnd);
 
 console.log(todayStart);
+
 var testData = {
-  'alltime':[1474524000000,1474556400000],
+  'alltime':[1474869638000,1474902030000],
   'orders':[
-            [1474524000000,1474527639000,123],
-            [1474559739000,1474534867000,124],
-            [1474553272000,1474556892000,125]
+            [1474869638000,1474872013000,123],
+            [1474872013000,1474881322000,124],
+            [1474884952000,1474889412000,125]
           ],
-  'breaks':{
-    '1':{'start-time':1474534867000, 'end-time':1474538495000},
-    '2':{'start-time':1474549460000, 'end-time':1474551057000}
-  }
+  'breaks':[
+            [1474881312000,1474884926000,1],
+            [1474894857000,1474896617000,2],
+          ],
+  'done':[
+            [1474869638000,1474871405000,1]
+
+          ]
 };
 
 let margin = {top: 20, right: 15, bottom: 15, left: 60}
   , width = 600 - margin.left - margin.right
-  , height = 100 - margin.top - margin.bottom;
+  , height = 150 - margin.top - margin.bottom;
 let start = testData.alltime[0];
 let end = testData.alltime[1];
 let range = [0, 600];
 let time = d3.scaleTime().domain([start, end]).range([margin.left, width]);
+let parseDateHour = d3.timeFormat('%H:%M');
 let timeLine = d3.select('#work-time')
 .append('svg:svg')
-.attr('viewBox','0 0 600 100')
+.attr('viewBox','0 0 600 150')
 .attr('preserveAspectRatio','xMinYMin');
-let scaleFactor  = 1/(testData.alltime[1] - testData.alltime[0]) * width;
-
-console.log(scaleFactor);
+let startTime = parseDateHour(testData.alltime[0].toString());
+let endTime = parseDateHour(testData.alltime[1].toString());
+let timeLineHeight = 40;
 let axisScale = d3.scaleTime()
                        .domain([testData.alltime[0], testData.alltime[1]])
                        .range([margin.left, width]);
+
 let xAxis = d3.axisBottom()
               .scale(axisScale)
               .tickFormat(d3.timeFormat('%H'));
+
 //Create an SVG group Element for the Axis elements and call the xAxis function
 let xAxisGroup = timeLine.append('g')
                           .call(xAxis)
                           .attr('transform', 'translate(0,' + height + ')');
 
-timeLine.selectAll('rect')
+timeLine.append('line')
+.attr('class', 'j-grain')
+.attr('x1', function() {return time(testData.alltime[0])})
+.attr('x2', function() {return time(testData.alltime[0])})
+.attr('transform', 'translate(0,' + (height-60)+ ')')
+.attr('y2','60')
+.attr('stroke', '#8e8e8e')
+.attr('stroke-width', '2');
+timeLine.append('text')
+.attr('class', 'j-grain-text')
+.attr('x', margin.left-20)
+.attr('y','50')
+.attr('fill', '#000')
+.attr('font-size', '14px')
+.text(startTime);
+
+timeLine.append('line')
+.attr('class', 'j-grain')
+.attr('x1', function() {return time(testData.alltime[1])})
+.attr('x2', function() {return time(testData.alltime[1])})
+.attr('transform', 'translate(0,' + (height-60)+ ')')
+.attr('y2','60')
+.attr('stroke', '#8e8e8e')
+.attr('stroke-width', '2');
+timeLine.append('text')
+.attr('class', 'j-grain-text')
+.attr('x', function(d) {return  time(testData.alltime[1])-20;})
+.attr('y','50')
+.attr('fill', '#000')
+.attr('font-size', '14px')
+.text(endTime);
+
+timeLine.selectAll('.order')
         .data(testData.orders)
         .enter().append('rect')
         .attr('class','order')
-        .attr('fill','red')
+        .attr('fill','#e6e6e6')
         .attr('x', function(d) { console.log(d.length);return  time(d[0]);})
-        .attr('y','20')
+        .attr('transform', 'translate(0,' + (height-timeLineHeight)+ ')')
         .attr('width', function(d) {let timeEnd = time(d[1]); let timeStart = time(d[0]); return timeEnd-timeStart;})
-        .attr('height', '40')
+        .attr('height', timeLineHeight)
+        .attr('data-num', function(d) {return d[2]})
         ;
-
-
-/*d3.csv('readme.csv', type, function(error, data) {
-
-});*/
-//timeLine();
+timeLine.selectAll('.breaks')
+        .data(testData.breaks)
+        .enter().append('rect')
+        .attr('class','breacks')
+        .attr('fill','#61b0ff')
+        .attr('x', function(d) {return  time(d[0]);})
+        .attr('transform', 'translate(0,' + (height-timeLineHeight)+ ')')
+        .attr('width', function(d) {let timeEnd = time(d[1]); let timeStart = time(d[0]); return timeEnd-timeStart;})
+        .attr('height', timeLineHeight)
+        .attr('data-num', function(d) {return d[2]})
+        ;
+timeLine.selectAll('.done')
+        .data(testData.done)
+        .enter().append('rect')
+        .attr('class','breacks')
+        .attr('fill','#e53b18')
+        .attr('x', function(d) {return  time(d[0]);})
+        .attr('transform', 'translate(0,' + (height-timeLineHeight)+ ')')
+        .attr('width', function(d) {let timeEnd = time(d[1]); let timeStart = time(d[0]); return timeEnd-timeStart;})
+        .attr('height', timeLineHeight)
+        .attr('data-num', function(d) {return d[2]})
+        ;
+timeLine.append('line')
+.attr('class', 'j-all')
+.attr('x1', function() {return time(testData.alltime[0])})
+.attr('x2', function() {return time(testData.alltime[0])})
+.attr('y2','140')
+.attr('y1','140')
+.attr('stroke', '#175289')
+.attr('stroke-width', '10')
+.transition()
+.duration(1944000)
+.attr('x2', function() {return time(testData.alltime[1])});
