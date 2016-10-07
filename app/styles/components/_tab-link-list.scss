@@ -1,0 +1,12 @@
+.tab-link-list {
+  @extend .row-only;
+  color:$base-third-color;
+  margin: 1.5rem 0;
+}
+.tab-link-list_item {
+  margin-right: 20px;
+  font-size: 1rem;
+  &.active {
+    color:#000;
+  }
+}

@@ -45,7 +45,25 @@ block content
          p Норма: 8 ч
        h4.u-mg-top Нерабочее время
        div.options-list-holder
-         div.options-list.row-only
+         div.options-list
+           div.option-list_item.row-only
+             div.option-list_item-title Дата (ДД.ММ.ГГГГ)
+             div.option-list_item-title Начало (ЧЧ:ММ)
+             div.option-list_item-title Конец (ЧЧ:ММ)
+           -for(var i = 1;i < 4;i++){
+           div.option-list_item.row-only
+             div.option-list_item-cel
+               include includes/calend-one.pug
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             div.option-list_item-cel
+               input(type='text', name="start-time[]", value="18:00", class="__min")
+             div.option-list_item-cel
+               a.del-btn.j-del
+                 svg(viewBox='0 0 16 16', class='icon-del')
+                   use(xlink:href='images/svg/plus.svg#def')
+           -}
+
            div.option-list_item
              div.option-list_item-title Дата (ДД.ММ.ГГГГ)
              -for(var i = 1;i < 4;i++){
@@ -73,7 +91,7 @@ block content
                  use(xlink:href='images/svg/plus.svg#def')
              -}
          a.def-link.__dashed.j-add Добавить
-     div(class="col-item")
+     div(class="col-item_40")
        h2 Среднее время работы
        div.add-card.__middle
          form.row-only.__inline.u-marg-bot
@@ -94,5 +112,41 @@ block content
              p
               b 2,25 мин.
          button.def-btn Сохранить
+       h2 Время простоя
+       -var links = ['Месяц','Год'];
+       -var action = '/show_break'
+       include includes/tab-link-list.pug
+       div.row-only
+         div.col-item_grow
+           div.legend-list.row-only.__no-mg
+             div.legend-list_item.row-only
+               div.legend-list_item_rec.__done
+               div.legend-list_item_text Простои
+             div.legend-list_item.row-only
+               div.legend-list_item_rec.__breacks
+               div.legend-list_item_text Перерыв
+             div.legend-list_item.row-only
+               div.legend-list_item_rec.__none
+               div.legend-list_item_text Нет простоев
+         div.col-item
+          p За месяц: <b>2,5 ч</b>
+          p За всё время: <b>5,4 ч</b>
+       h2 Статистика по заказам, шт.
+       -var links = ['Месяц','Год'];
+       -var action = '/show_break'
+       include includes/tab-link-list.pug
+       div.row-only
+         div.col-item_grow
+           div.legend-list.row-only.__no-mg
+             div.legend-list_item.row-only
+               div.legend-list_item_rec.__done
+               div.legend-list_item_text Просрочено
+             div.legend-list_item.row-only
+               div.legend-list_item_rec.__norm
+               div.legend-list_item_text Вовремя
+           div(class='j-stacked-bar-chart', data-csv="tables/stackedTest.csv", id='statorder')
+         div.col-item
+          p За месяц: <b>2,5 ч</b>
+          p За всё время: <b>5,4 ч</b>
 
     button.def-btn Сохранить

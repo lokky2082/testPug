@@ -1,0 +1,35 @@
+.legend-list {
+
+margin: 3rem 5%;
+&.__no-mg{
+  margin: 0;
+}
+}
+.legend-list_item {
+  margin-left: 1%;
+  font-size: 0.8rem;
+}
+.legend-list_item_text{
+  margin-left: 10px;
+}
+.legend-list_item_rec {
+width: 37px;
+height: 18px;
+border: 1px solid #8e8e8e;
+
+  &.__done {
+    background: $accent-color;
+  }
+  &.__order {
+    background: #e6e6e6;
+  }
+  &.__norm {
+    background: $base-first-color;
+  }
+  &.__breacks {
+    background: #61b0ff;
+  }
+  &.__none{
+    background: #fff;
+  }
+}

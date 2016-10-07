@@ -25,4 +25,7 @@ Desc:def link
     border-bottom: 1px dashed;
     border-color:currentColor;
   }
+  &.active {
+    border-color:transparent;
+  }
 }

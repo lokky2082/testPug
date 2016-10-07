@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="425.75699px" height="425.75659px" viewBox="0 0 425.75699 425.75659" enable-background="new 0 0 425.75699 425.75659"
 	 xml:space="preserve">
@@ -8,10 +6,10 @@
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#003261" d="M212.87849,425.75659
 		c117.2494,0,212.87849-95.629,212.87849-212.87819C425.75699,95.629,330.1279,0,212.87849,0S0,95.629,0,212.8784
 		C0,330.12759,95.629,425.75659,212.87849,425.75659z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M212.87849,422.47891
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M212.87849,422.47891
 		c115.44432,0,209.60081-94.15671,209.60081-209.60051c0-115.444-94.15649-209.60071-209.60081-209.60071
 		C97.4344,3.2777,3.2777,97.4344,3.2777,212.8784C3.2777,328.3222,97.4344,422.47891,212.87849,422.47891z"/>
-	
+
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5669" stroke-miterlimit="22.9256" d="
 		M212.87849,384.25519c94.3911,0,171.377-76.9859,171.377-171.37679c0-94.39111-76.9859-171.377-171.377-171.377
 		c-94.3912,0-171.37669,76.9859-171.37669,171.377C41.5018,307.26929,118.4873,384.25519,212.87849,384.25519z"/>
@@ -28,7 +26,7 @@
 		<stop  offset="0" style="stop-color:#950E11"/>
 		<stop  offset="1" style="stop-color:#F04C23"/>
 	</radialGradient>
-	
+
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_2_)" stroke="#FFFFFF" stroke-width="0.5669" stroke-miterlimit="22.9256" d="
 		M212.87849,61.0664c83.8437,0,151.812,67.9683,151.812,151.81201c0,83.8438-67.96829,151.812-151.812,151.812
 		s-151.812-67.9682-151.812-151.812C61.0665,129.0347,129.03481,61.0664,212.87849,61.0664L212.87849,61.0664z M212.87849,70.2924
@@ -231,46 +229,46 @@
 </g>
 <g id="points_1_">
 	<g id="points">
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M212.87849,341.08801c1.2433,0,2.25751-1.01422,2.25751-2.25772
+		<path class="j-small-circle" data-num="3" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M212.87849,341.08801c1.2433,0,2.25751-1.01422,2.25751-2.25772
 			c0-1.24359-1.01421-2.2576-2.25751-2.2576s-2.25749,1.01401-2.25749,2.2576
 			C210.621,340.07379,211.63519,341.08801,212.87849,341.08801z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M276.289,324.15561c1.2435,0,2.25769-1.01431,2.25769-2.25781
+		<path class="j-small-circle" data-num="2" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M276.289,324.15561c1.2435,0,2.25769-1.01431,2.25769-2.25781
 			c0-1.24359-1.01419-2.25751-2.25769-2.25751c-1.24359,0-2.2576,1.01392-2.2576,2.25751
 			C274.0314,323.1413,275.04541,324.15561,276.289,324.15561z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M322.21811,278.22641c1.24359,0,2.25778-1.01431,2.25778-2.25781
+		<path class="j-small-circle" data-num="1" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M322.21811,278.22641c1.24359,0,2.25778-1.01431,2.25778-2.25781
 			c0-1.24359-1.01419-2.25751-2.25778-2.25751c-1.2435,0-2.25751,1.01392-2.25751,2.25751
 			C319.9606,277.2121,320.97461,278.22641,322.21811,278.22641z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M338.93875,215.14136c1.24359,0,2.25781-1.01431,2.25781-2.25781
+		<path class="j-small-circle" data-num="0" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M338.93875,215.14136c1.24359,0,2.25781-1.01431,2.25781-2.25781
 			c0-1.24359-1.01422-2.25749-2.25781-2.25749c-1.2435,0-2.25751,1.0139-2.25751,2.25749
 			C336.68124,214.12704,337.69525,215.14136,338.93875,215.14136z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M322.21811,152.04565c1.24359,0,2.25778-1.01431,2.25778-2.25781
+		<path class="j-small-circle" data-num="11" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M322.21811,152.04565c1.24359,0,2.25778-1.01431,2.25778-2.25781
 			c0-1.24359-1.01419-2.25749-2.25778-2.25749c-1.2435,0-2.25751,1.0139-2.25751,2.25749
 			C319.9606,151.03134,320.97461,152.04565,322.21811,152.04565z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M276.28906,106.1163c1.24359,0,2.25778-1.01431,2.25778-2.2578
+		<path class="j-small-circle" data-num="10" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M276.28906,106.1163c1.24359,0,2.25778-1.01431,2.25778-2.2578
 			c0-1.2436-1.01419-2.2575-2.25778-2.2575c-1.2435,0-2.25751,1.0139-2.25751,2.2575
 			C274.03156,105.102,275.04556,106.1163,276.28906,106.1163z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M212.88396,89.18425c1.24359,0,2.2578-1.0143,2.2578-2.2578
+		<path class="j-small-circle" data-num="9" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M212.88396,89.18425c1.24359,0,2.2578-1.0143,2.2578-2.2578
 			c0-1.24361-1.01421-2.2575-2.2578-2.2575c-1.2435,0-2.25751,1.01389-2.25751,2.2575
 			C210.62645,88.16995,211.64046,89.18425,212.88396,89.18425z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M86.8181,215.136c1.2436,0,2.2578-1.0143,2.2578-2.2576
+		<path class="j-small-circle" data-num="6" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M86.8181,215.136c1.2436,0,2.2578-1.0143,2.2578-2.2576
 			c0-1.24321-1.0142-2.25751-2.2578-2.25751c-1.2435,0-2.2575,1.0143-2.2575,2.25751
 			C84.5606,214.1217,85.5746,215.136,86.8181,215.136z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M149.468,324.15561c1.24359,0,2.2578-1.01431,2.2578-2.25781
+		<path class="j-small-circle" data-num="4" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M149.468,324.15561c1.24359,0,2.2578-1.01431,2.2578-2.25781
 			c0-1.24359-1.01421-2.25751-2.2578-2.25751c-1.2435,0-2.25751,1.01392-2.25751,2.25751
 			C147.21049,323.1413,148.2245,324.15561,149.468,324.15561z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M103.5388,278.22641c1.2436,0,2.2578-1.01431,2.2578-2.25781
+		<path  class="j-small-circle" data-num="5" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M103.5388,278.22641c1.2436,0,2.2578-1.01431,2.2578-2.25781
 			c0-1.24359-1.0142-2.25751-2.2578-2.25751c-1.2435,0-2.2575,1.01392-2.2575,2.25751
 			C101.2813,277.2121,102.2953,278.22641,103.5388,278.22641z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M149.468,106.1163c1.24359,0,2.2578-1.0139,2.2578-2.2575
+		<path  class="j-small-circle" data-num="8" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M149.468,106.1163c1.24359,0,2.2578-1.0139,2.2578-2.2575
 			c0-1.2435-1.01421-2.2578-2.2578-2.2578c-1.2435,0-2.25751,1.01431-2.25751,2.2578
 			C147.21049,105.1024,148.2245,106.1163,149.468,106.1163z"/>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M103.5388,152.0455c1.2436,0,2.2578-1.0139,2.2578-2.25751
+		<path class="j-small-circle" data-num="7" fill-rule="evenodd" clip-rule="evenodd" fill="#1D5689" d="M103.5388,152.0455c1.2436,0,2.2578-1.0139,2.2578-2.25751
 			c0-1.2435-1.0142-2.2578-2.2578-2.2578c-1.2435,0-2.2575,1.0143-2.2575,2.2578
 			C101.2813,151.0316,102.2953,152.0455,103.5388,152.0455z"/>
 	</g>
 </g>
-<g id="circle">
-	
-		<circle id="circle_1_" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#000000" stroke-width="32" stroke-miterlimit="22.9256" cx="212.87846" cy="212.87837" r="188"/>
+<g id="circle" >
+		<circle id="circle_1_" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#1D5689" stroke-width="32" stroke-miterlimit="22.9256" cx="212.87846" cy="212.87837" r="188"/>
 </g>
 </svg>
+<!--transform="rotate(-45 106,43923 106,43923)"-->

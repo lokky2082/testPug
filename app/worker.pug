@@ -19,8 +19,25 @@ block content
        span.everage-stat_text-big.__cool 2,55
        span.everage-stat_text-big /
        span.everage-stat_text-big.__curr 3,2
-       time (за сегодня/ за месяц)
+       time (за сегодня/за месяц)
     div.timer-holder
       include includes/circle-clock.pug
+    div.u-center.u-mg-top
+     button.deco-btn.__dark Отложить
 
- button.def-btn Сохранить
+ div.legend-list.row-only
+   div.legend-list_item.row-only
+     div.legend-list_item_rec.__done
+     div.legend-list_item_text Сделано
+   div.legend-list_item.row-only
+     div.legend-list_item_rec.__norm
+     div.legend-list_item_text Норма
+   div.legend-list_item.row-only
+     div.legend-list_item_rec.__order
+     div.legend-list_item_text План
+   div.legend-list_item.row-only
+     div.legend-list_item_rec.__breacks
+     div.legend-list_item_text Перерыв
+   div.legend-list_item.row-only
+     div.legend-list_item_rec.__none
+     div.legend-list_item_text Нет заказов

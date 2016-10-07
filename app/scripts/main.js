@@ -1,24 +1,71 @@
 'use stict'
 $('.chosen-select').chosen();
 $('.j-open-kalendae').click(function(){
-  var btnDate = $(this);
+  let btnDate = $(this);
   $('.j-date-picker-holder').css({'display':'none'});
-  var calend = btnDate.closest('.j-calend-contein').find('.j-date-picker-holder');
+  let calend = btnDate.closest('.j-calend-contein').find('.j-date-picker-holder');
   calend.css({'display':'block'});
 });
 $('.j-kalendae-close').click(function(){
-    var btnClose = $(this);
-    var calend = btnClose.closest('.j-calend-contein').find('.j-date-picker-holder');
+    let btnClose = $(this);
+    let calend = btnClose.closest('.j-calend-contein').find('.j-date-picker-holder');
     calend.css({'display':'none'});
 });
 $(document).on('click', '.k-active', function(){
-  var btnDay = $(this);
-  var dayData = btnDay.data('date');
-  var fild = btnDay.closest('.j-calend-contein').find('.j-date-fild');
-  var calend = btnDay.closest('.j-calend-contein').find('.j-date-picker-holder');
+  let btnDay = $(this);
+  let dayData = btnDay.data('date');
+  let fild = btnDay.closest('.j-calend-contein').find('.j-date-fild');
+  let calend = btnDay.closest('.j-calend-contein').find('.j-date-picker-holder');
   fild.prop('value', dayData);
   calend.css({'display':'none'});
 });
+
+$('.j-stacked-bar-chart').each(function(){
+   let obj = $(this);
+   let data = obj.data('csv');
+   let id = '#'+obj.attr('id');
+   let margin = {top: 10, right: 10, bottom: 10, left: 10}
+   let height = 178 - margin.bottom - margin.top;
+   let width = 480 - margin.left - margin.right;
+   let x = d3.scaleBand()
+      .range([0, width])
+      .padding(0.1);
+   let y = d3.scaleLinear()
+            .range([height, 0]);
+   let stackedChart = d3.select(id)
+   .append('svg:svg')
+   .attr('viewBox','0 0 480 178')
+   .attr('preserveAspectRatio','xMinYMin')
+   .append('g')
+   .attr('transform','translate(' + margin.left + ',' + margin.top + ')');
+   d3.csv(data, function(error, data) {
+       if (error) throw error;
+       let arrHeight = [];
+       data.forEach(function(d) {
+         d.norm = parseFloat(d.norm);
+         d.stack =  parseFloat(d.stack);
+         arrHeight.push(d.norm+d.stack);
+         //console.log(d.norm, d.stack);
+       });
+       x.domain(data.map(function(d) { return d.State; }));
+       y.domain([0, d3.max(data, function(d) {return d.norm;})]);
+       stackedChart.selectAll('.bar-norm')
+      .data(data)
+      .enter().append('rect')
+        .attr('class', 'bar-norm')
+        .attr('x', function(d) { return x(d.State); })
+        .attr('width', x.bandwidth())
+        .attr('y', function(d) { return y(d.norm); })
+        .attr('height', function(d) { return height - y(d.norm);});
+   });
+});
+
+
+
+
+
+
+
 var todayStart = new Date;
 todayStart.setHours(9,0);
 todayStart = Date.parse(todayStart);
@@ -149,3 +196,36 @@ timeLine.append('line')
 .transition()
 .duration(1944000)
 .attr('x2', function() {return time(testData.alltime[1])});
+
+
+$('.j-clock').each(function(){
+  let clock = $(this);
+  let time = parseInt(clock.data('time'));
+  let sec = time*60;
+  let part = sec/12;
+  let leftTime = 0;
+  $('.j-left-time').text(leftTime);
+  $('.j-all-time').text(time);
+  $('.j-small-circle').each(function(){
+     let circle = $(this);
+     let data = parseFloat(circle.data('num'));
+     let delay = data * part*1000;
+     setTimeout(function()
+                      {
+                        circle.attr('fill', '#e53b18');
+                      }, delay);
+
+  });
+  let timer = setInterval(function(){
+    leftTime++
+    if(leftTime === time){
+      clearInterval(timer);
+      $('#circle circle').attr('stroke', '#e53b18');
+    }
+    $('.j-left-time').text(leftTime);
+
+  }, 60000);
+
+  $('#circle').css({'animation': 'dash '+sec+'s linear forwards'});
+
+});

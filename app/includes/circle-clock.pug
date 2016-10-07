@@ -1,2 +1,13 @@
-div.circle-clock
-  include ../images/svg/button.svg
+div(class="circle-clock j-clock", data-time="2")
+  div.circle-clock_img
+   include ../images/svg/button.svg
+  div.circle-clock-text
+    div.circle-clock-text_big OK
+    div.circle-clock-text_desc
+      span.clock-text_desc
+        span.j-left-time 45
+        span.__small мин&nbsp;
+      span.clock-text_desc
+       span.__base &nbsp;/&nbsp;
+         span.j-all-time 60
+         span.__small мин

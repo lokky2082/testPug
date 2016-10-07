@@ -1,0 +1,48 @@
+.circle-clock {
+  margin-top: 2rem;
+  position: relative;
+}
+.circle-clock-text {
+  @extend .col-only;
+  @extend .c-vh-center;
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+
+}
+.circle-clock_img {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.circle-clock-text {
+  color:$base-first-color;
+  font-size: 1.25rem;
+}
+.circle-clock-text_big {
+  color: $accent-color;
+  font-size: 5rem;
+  line-height: 1.4;
+}
+.clock-text_desc {
+  color: $accent-color;
+  font-size: 150%;
+  .__small {
+    font-size: 1.2rem;
+  }
+
+  .__base {
+    color:$base-first-color;
+  }
+}
+#circle {
+  stroke-dasharray:1181;
+  stroke-dashoffset: 1181;
+  //animation: dash 15s linear forwards;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
